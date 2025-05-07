@@ -1,0 +1,28 @@
+:root
+{
+  --bg-color: white;
+  --text-color: black;
+  --accent-color: darkgray;
+}
+
+*
+{
+  font-family: "Quicksand", sans-serif;
+  color: var(--text-color);
+}
+
+nav
+{
+  background-color: var(--bg-color);
+  height: auto;
+  min-height: 50px;
+  max-height: 90px;
+  border-radius: 0 0 15px 15px;
+  background: #fff;
+  box-shadow: 12px 12px 50px #8c8c8c, -12px -12px 50px #ffffff;
+}
+
+nav h1
+{
+  margin: auto 0 auto 1%;
+}
