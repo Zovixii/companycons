@@ -43,6 +43,8 @@ nav
   box-shadow: 12px 12px 50px var(--shadow-dark);
   width: 100%;
   z-index: 15;
+
+  background-color: var(--bg-color);
 }
 
 nav h1
