@@ -2,27 +2,72 @@
 {
   --bg-color: white;
   --text-color: black;
-  --accent-color: darkgray;
+  --accent-color: linear-gradient(30deg,rgba(153, 56, 217, 1) 29%, rgba(242, 70, 148, 1) 60%);
+
+  --shadow-dark: #8c8c8c;
+  --shadow-light: #fff;
 }
 
-*
+@media (prefers-color-scheme: dark)
+{
+  :root
+  {
+    --bg-color: #292929;
+    --text-color: white;
+
+    --shadow-dark: #0a0a0a;
+    --shadow-light: #2a2a2a;
+  }
+}
+
+body
 {
   font-family: "Quicksand", sans-serif;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
 nav
 {
-  background-color: var(--bg-color);
-  height: auto;
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 10vh;
   min-height: 50px;
-  max-height: 90px;
+  max-height: 100px;
   border-radius: 0 0 15px 15px;
-  background: #fff;
-  box-shadow: 12px 12px 50px #8c8c8c, -12px -12px 50px #ffffff;
+  /* TEMP #box-shadow: 12px 12px 50px #8c8c8c, -12px -12px 50px #ffffff; */
+  box-shadow: 12px 12px 50px var(--shadow-dark);
+  width: 100%;
+  z-index: 15;
 }
 
 nav h1
 {
-  margin: auto 0 auto 1%;
+  display: inline-block;
+  height: auto;
+  align-content: center;
+  margin-left: 14px;
+  background: var(--accent-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* for compat */
+  background-clip: text;
+  color: transparent;
 }
+
+main
+{
+  margin-top: 5%;
+}
+
+/*
+ * Notes for future editing:
+ * Make center a raised platform
+ * Make individual boxes (like per company)
+ * raised or indented
+ * Make all buttons indented.
+ * /
